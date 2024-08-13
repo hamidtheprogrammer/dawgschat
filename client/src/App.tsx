@@ -27,7 +27,7 @@ const App: React.FC = () => {
             onClick={() => {
               setProfileBar(false);
             }}
-            className="user-icon h-[2.5rem] bg-transparent border-[1px] translate-x-9 translate-y-9 aspect-square self-start"
+            className="user-icon h-[2.5rem] bg-transparent border-[1px] max-sm:translate-x-2 translate-y-9 aspect-square self-start"
           >
             X
           </button>

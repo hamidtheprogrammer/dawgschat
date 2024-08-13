@@ -15,6 +15,11 @@ html,
   height: 100%;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
 @layer components {
   .wrapper {
     @apply mx-auto px-8  lg:max-w-[75rem];

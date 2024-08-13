@@ -58,7 +58,7 @@ const Chat: React.FC = () => {
   return (
     <div className="flxRowStart h-full whiteBg">
       <section
-        className={`flxRowStart sm:max-w-[23.5rem] flex-1 max-sm:fixed max-sm:w-full inset-0 z-30 ${
+        className={`flxRowStart sm:max-w-[23.5rem] flex-1 max-sm:fixed max-sm:w-full inset-0 z-20 ${
           !openConversationBar && "max-sm:-translate-x-full"
         } transition-transform duration-200`}
       >
@@ -109,7 +109,7 @@ const Chat: React.FC = () => {
             }`}
           ></div>
           <section
-            className={`flex-1 max-w-[20rem] border-l-[1px] border-black/20 whiteBg w-full max-lg:fixed h-full right-0 z-30 transform-translate duration-500 ${
+            className={`flex-1 sm:max-w-[20rem]  border-l-[1px] border-black/20 whiteBg w-full max-lg:fixed max-sm:w-full h-full right-0 z-30 transform-translate duration-500 ${
               !isSideProfileBarOpen && "max-lg:translate-x-full"
             }`}
           >

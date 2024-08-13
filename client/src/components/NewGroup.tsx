@@ -31,7 +31,7 @@ const NewGroup: React.FC<INewGroupProps> = ({ isOpen, handleOpenChange }) => {
 
   return (
     <div
-      className={`h-full fixed w-[25rem] z-10 ${
+      className={`h-full fixed sm:w-[25rem] max-sm:w-full max-sm:pr-20 z-10 ${
         !isOpen && "-translate-x-[105%]"
       } transition-transform duration-500 whiteBg`}
     >

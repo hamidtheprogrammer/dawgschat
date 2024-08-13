@@ -80,7 +80,7 @@ const MyProfile: React.FC = () => {
     }
   }, [data]);
   return (
-    <div className="auth-form-container h-[90%] overflow-y-auto profile-form">
+    <div className="auth-form-container h-[90%] overflow-y-auto profile-form z-50">
       <div className="relative h-[7rem] w-full bg-black">
         <img
           src={coverImage}
