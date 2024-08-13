@@ -15,7 +15,7 @@ import { useAuthContext } from "./hooks/authHooks";
 const App: React.FC = () => {
   const { profileBar, setProfileBar } = useAuthContext();
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden h-full">
       {profileBar && (
         <div
           className={`fixed inset-0 w-full h-full bg-black/40 z-30 flxRowCenter items-center ${

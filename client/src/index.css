@@ -9,8 +9,10 @@
   font-weight: 400;
 }
 body,
-html {
+html,
+#root {
   background: #f3f2f2;
+  height: 100%;
 }
 
 @layer components {

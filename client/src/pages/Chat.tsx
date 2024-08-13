@@ -56,7 +56,7 @@ const Chat: React.FC = () => {
   }, [currentUser, navigate]);
 
   return (
-    <div className="flxRowStart h-[100vh] whiteBg">
+    <div className="flxRowStart h-full whiteBg">
       <section
         className={`flxRowStart sm:max-w-[23.5rem] flex-1 max-sm:fixed max-sm:w-full inset-0 z-30 ${
           !openConversationBar && "max-sm:-translate-x-full"
