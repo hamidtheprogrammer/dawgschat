@@ -101,7 +101,7 @@ body {
   }
 
   .form-input {
-    @apply w-full text-xs focus:outline-none h-[1.9rem] rounded-sm text-black p-1 border-[1px];
+    @apply w-full max-sm:text-[16px] text-xs focus:outline-none h-[1.9rem] rounded-sm text-black p-1 border-[1px];
   }
 
   .form-error {

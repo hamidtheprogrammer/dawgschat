@@ -45,7 +45,7 @@ export interface IConversationsContext {
   conversations: IConversations[];
   setConversations: (conversations: IConversations[]) => void;
   currentConversation: ICurrentConversation | null;
-  setCurrentConversation: (conversation: ICurrentConversation) => void;
+  setCurrentConversation: (conversation: ICurrentConversation | null) => void;
   friends: IUsers[];
   setFriends: (friends: IUsers[]) => void;
   selectedConversation: IConversations | null;

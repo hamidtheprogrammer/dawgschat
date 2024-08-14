@@ -4,6 +4,10 @@ import { toast } from "react-toast";
 import { useNavigate } from "react-router";
 import { useContext } from "react";
 import { AuthContext, IAuthContext } from "../contexts/AuthState";
+import {
+  useConversationsHook,
+  useSocketHook,
+} from "../hooks/conversationHooks";
 
 export const useAuthContext = (): IAuthContext => {
   const { currentUser, setCurrentUser, profileBar, setProfileBar } =
@@ -48,12 +52,26 @@ const useRegisterHook = () => {
 };
 
 const useLogOutHook = () => {
+  const { setSocket } = useSocketHook();
+  const {
+    setCurrentConversation,
+    setConversations,
+    setSelectedConversation,
+    setFriends,
+    setOpenConversationBar,
+  } = useConversationsHook();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const { mutate, isLoading } = useMutation({
     mutationFn: apiAuth.logout,
     onSuccess: () => {
       queryClient.invalidateQueries("verify-token");
+      setSocket(null);
+      setCurrentConversation(null);
+      setConversations([]);
+      setSelectedConversation(null);
+      setFriends([]);
+      setOpenConversationBar(false);
       navigate("/login");
     },
   });

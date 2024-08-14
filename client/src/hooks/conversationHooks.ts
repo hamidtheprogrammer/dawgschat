@@ -45,8 +45,8 @@ export const useConversationsHook = (): IConversationsContext => {
 };
 
 export const useSocketHook = () => {
-  const { socket } = useContext(SocketContext);
-  return { socket };
+  const { socket, setSocket } = useContext(SocketContext);
+  return { socket, setSocket };
 };
 
 export const useSendMessage = () => {

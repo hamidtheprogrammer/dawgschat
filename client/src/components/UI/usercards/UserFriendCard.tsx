@@ -7,11 +7,13 @@ interface IUserCardProps {
 }
 
 const UserFriendCard: React.FC<IUserCardProps> = ({ user }) => {
-  const { setCurrentConversation } = useConversationsHook();
+  const { setCurrentConversation, setOpenConversationBar } =
+    useConversationsHook();
   if (user)
     return (
       <li
         onClick={() => {
+          setOpenConversationBar(false);
           setCurrentConversation({
             receiverId: user._id as string,
           });

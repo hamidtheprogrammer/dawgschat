@@ -96,7 +96,7 @@ const Conversation: React.FC = () => {
         <p>Chat not found</p>
       ) : (
         !newConversation && (
-          <ul className="flxColStart gap-1 px-[2.5rem] pt-3 overflow-y-auto relative w-full h-[85%] chat-container pb-5">
+          <ul className="flxColStart gap-1 px-[1rem] pt-3 overflow-y-auto relative w-full h-[85%] chat-container pb-5">
             {selectedConversation?.messages?.map((message) => (
               <li
                 className={` relative w-fit max-w-[70%] ${
@@ -106,12 +106,12 @@ const Conversation: React.FC = () => {
               >
                 {selectedConversation.isGroup &&
                   message.senderId?._id !== currentUser._id && (
-                    <span className="text-xs ">
+                    <span className="text-[0.8rem] md:text-xs ">
                       {message.senderId?.username}
                     </span>
                   )}
                 <span
-                  className={`relative group text-xs primaryTextCol flxColStart gap-3 px-3 py-2 rounded-xl shadow-sm shadow-black/40 transition-transform duration-500 ${
+                  className={`relative group text-[0.8rem] md:text-xs  primaryTextCol flxColStart gap-3 px-3 py-2 rounded-xl shadow-sm shadow-black/40 transition-transform duration-500 ${
                     message?.senderId?._id === currentUser._id
                       ? " primaryBgCol whiteText rounded-br-none hover:translate-x-5"
                       : "bg-gray-100 rounded-bl-none hover:-translate-x-5"
@@ -124,7 +124,7 @@ const Conversation: React.FC = () => {
                         messageId: message._id as string,
                       });
                     }}
-                    className={`text-xs absolute font-bold rounded-md px-4 py-3 hidden group-hover:block ${
+                    className={`text-[0.8rem] md:text-xs  absolute font-bold rounded-md px-4 py-3 hidden group-hover:block ${
                       message?.senderId?._id === currentUser._id
                         ? "left-0 -translate-x-full bg-black"
                         : "right-0 translate-x-full bg-white"
@@ -139,7 +139,7 @@ const Conversation: React.FC = () => {
                         "bg-slate-300"
                       } flxColStart tagMessageBg rounded-xl p-1`}
                     >
-                      <p className="text-xs text-black/70">
+                      <p className="text-[0.8rem] md:text-xs text-black/70">
                         .
                         {message.reference.senderId &&
                           message.reference.senderId.username}
@@ -171,7 +171,7 @@ const Conversation: React.FC = () => {
           action="POST"
         >
           {refMessage && (
-            <div className="text-xs rounded-xl flxBtw gap-8 font-bold py-4 shadow-sm shadow-black whiteBg px-3 w-fit text-black absolute -translate-y-[110%]">
+            <div className="text-[0.8rem] md:text-xs rounded-xl flxBtw gap-8 font-bold py-4 shadow-sm shadow-black whiteBg px-3 w-fit text-black absolute -translate-y-[110%]">
               <p>Replying to {refMessage.username}</p>
               <button
                 type="button"
@@ -189,7 +189,7 @@ const Conversation: React.FC = () => {
               messageChange(e);
             }}
             type="text"
-            className="text-xs rounded-xl h-[2rem] whiteBg px-3 w-[86%] focus:outline-none"
+            className="text-[0.8rem] max-sm:text-[16px] md:text-xs rounded-xl h-[2rem] whiteBg px-3 w-[86%] focus:outline-none"
             placeholder="Type a message"
           />
           <div className="absolute left-0 bottom-[3rem]">
